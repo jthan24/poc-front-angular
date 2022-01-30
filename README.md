@@ -53,3 +53,5 @@ ng build
 guide
 
 https://angular.io/tutorial/toh-pt0
+
+ng generate component products
