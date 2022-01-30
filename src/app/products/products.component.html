@@ -5,9 +5,7 @@
     <mat-card-content>
       Nombre: {{producto.nombre}}
     </mat-card-content>
-    <button mat-raised-button color="warn" >
-    X
-    </button>
+    <button mat-raised-button color="warn" (click)="delete(producto)">X</button>
   </mat-card>
 </ul>
 

@@ -35,4 +35,9 @@ export class ProductsComponent implements OnInit {
       .subscribe(productos => this.productos = productos);
   }
 
+  delete(producto : Producto): void{
+    this.productos = this.productos.filter(h => h !== producto);
+    this.productoService.deleteProducto(producto.id).subscribe();
+  }
+
 }
