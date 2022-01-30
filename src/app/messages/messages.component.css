@@ -1,0 +1,12 @@
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+
+.mat-list-base .mat-list-item {
+  color: black;
+}
+
+.mat-list-base .mat-subheader {
+  color: black;
+}

@@ -1,0 +1,15 @@
+<div *ngIf="messageService.messages.length">
+
+  <button mat-fab color="primary" aria-label="Eliminar mensajes" (click)="messageService.clear()">
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  <mat-list>
+    <div mat-subheader>Mensajes</div>
+    <mat-list-item *ngFor='let message of messageService.messages'>
+      <mat-icon mat-list-icon>note</mat-icon>
+      <dic mat-line>{{message}}</dic>
+    </mat-list-item>
+  </mat-list>
+
+</div>

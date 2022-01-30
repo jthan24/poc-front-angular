@@ -5,18 +5,21 @@ import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from './products/products.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,9 @@ import { ProductsComponent } from './products/products.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
