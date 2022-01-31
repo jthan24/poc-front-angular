@@ -40,4 +40,14 @@ export class ProductsComponent implements OnInit {
     this.productoService.deleteProducto(producto.id).subscribe();
   }
 
+  add (idprod : string, nombre : string, valor : string): void {
+    console.log(idprod, nombre, valor);
+    if (!idprod || !nombre || !valor ) { return; }
+    let newProd : Producto = { id: parseInt(idprod), nombre: nombre ,valor: parseInt(valor)};
+    this.productoService.addProducto(newProd)
+      .subscribe(producto => {
+        this.productos.push(producto);
+      });
+  }
+
 }

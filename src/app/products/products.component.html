@@ -1,12 +1,48 @@
-<ul class="card-container">
-  <mat-card *ngFor="let producto of productos" [class.selected]="producto === selectedProducto" (click)="onSelect(producto)">
-    <mat-card-title>Id: {{producto.id}}</mat-card-title>
-    <mat-card-subtitle>Valor: {{producto.valor}}</mat-card-subtitle>
-    <mat-card-content>
-      Nombre: {{producto.nombre}}
-    </mat-card-content>
-    <button mat-raised-button color="warn" (click)="delete(producto)">X</button>
-  </mat-card>
-</ul>
+
+<mat-tab-group>
+  <mat-tab label="Lista">
+    <ul class="card-container">
+      <mat-card *ngFor="let producto of productos" [class.selected]="producto === selectedProducto" (click)="onSelect(producto)">
+        <mat-card-title>Id: {{producto.id}}</mat-card-title>
+        <mat-card-subtitle>Valor: {{producto.valor}}</mat-card-subtitle>
+        <mat-card-content>
+          Nombre: {{producto.nombre}}
+        </mat-card-content>
+        <button mat-raised-button color="warn" (click)="delete(producto)">X</button>
+      </mat-card>
+    </ul>
+  </mat-tab>
+  <mat-tab label="Agregar" >
+    <div>
+      <form>
+        <mat-form-field appearance="fill" >
+          <mat-label>ID del producto</mat-label>
+          <input matInput type="number" placeholder="Ej 1" #productoId />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+          <mat-label>Nombre del producto</mat-label>
+          <input matInput placeholder="Ej Leche" #productoNombre />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+          <mat-label>Valor del producto</mat-label>
+          <input matInput type="number" placeholder="Ej 1000" #productoValor />
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <button mat-button color="primary" (click)="add(productoId.value, productoNombre.value, productoValor.value); productoId.value=''">
+          Agregar producto
+        </button>
+      </form>
+
+      <!-- (click) passes input value to add() and then clears the input -->
+    </div>
+  </mat-tab>
+</mat-tab-group>
 
 

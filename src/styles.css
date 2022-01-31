@@ -208,7 +208,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 40px;
     border-radius: 40px;
     margin: 8px;
-    background-color: white;
     border: 1px solid #eeeeee;
     display: flex;
     justify-content: center;

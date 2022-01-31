@@ -7,6 +7,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatListModule,
     MatIconModule,
+    MatTabsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
